@@ -4,10 +4,61 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css" />
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
-    <script src="index.js"></script>
+    <div class="container">
+      <div class="image-container">
+        <img src="sign-up.jpg" alt="green leafs" />
+      </div>
+      <div class="form-container">
+        <div class="top-form-container heading-font">
+          This is not a real online service! You know you need something like
+          this in your life to help you realize your deepest dreams. Sign up
+          <i>now</i>
+          to get started.
+          <p>You <i>know</i> you want to</p>
+        </div>
+        <div class="middle-form-container">
+          <fieldset>
+            <legend><span class="heading-font">Let's do this!</span></legend>
+            <form class="form" id="sign-up-form" action="POST">
+              <label class="form-label">
+                FIRST NAME<input type="text" name="firstName" id="firstName" />
+              </label>
+              <label class="form-label">
+                LAST NAME<input type="text" name="lastName" id="lastName" />
+              </label>
+              <label class="form-label">
+                EMAIL<input type="email" name="email" id="email" />
+              </label>
+              <label class="form-label">
+                PHONE NUMBER<input
+                  type="number"
+                  name="phoneNumber"
+                  id="phoneNumber"
+                />
+              </label>
+              <label class="form-label">
+                PASSWORD<input type="password" name="password" id="password" />
+              </label>
+              <label class="form-label">
+                CONFIRM PASSWORD<input
+                  type="password"
+                  name="confirmPassword"
+                  id="confirmPassword"
+                />
+              </label>
+            </form>
+          </fieldset>
+        </div>
+        <div class="bottom">
+          <button class="btn" form="sign-up-form">Create Account</button>
+          <p>Already have an account? <a href="#">Log In</a></p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
