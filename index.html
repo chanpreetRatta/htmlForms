@@ -16,9 +16,9 @@
       <div class="form-container">
         <div class="top-form-container heading-font">
           This is not a real online service! You know you need something like
-          this in your life to help you realize your deepest dreams. Sign up
-          <i>now</i>
-          to get started.
+          this in your life to help you realize your deepest dreams.
+          <p>Sign up <i>now to get started.</i></p>
+
           <p>You <i>know</i> you want to</p>
         </div>
         <div class="middle-form-container">
@@ -42,7 +42,14 @@
                 />
               </label>
               <label class="form-label">
-                PASSWORD<input type="password" name="password" id="password" />
+                PASSWORD<input
+                  type="password"
+                  name="password"
+                  id="password"
+                  pattern=""
+                  title="please enter the correct phone number"
+                />
+                <span class="not-matched">*Passwords do not match</span>
               </label>
               <label class="form-label">
                 CONFIRM PASSWORD<input
@@ -60,5 +67,6 @@
         </div>
       </div>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>
