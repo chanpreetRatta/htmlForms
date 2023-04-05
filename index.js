@@ -22,7 +22,7 @@ let passwordMatch = document.querySelector(".not-matched");
 let newForm = new Form(form);
 form.addEventListener("keyup", () => {
   if (newForm.matchPassword()) {
-    passwordMatch.style = "display: none";
+    passwordMatch.style = "display: hidden";
   } else if (!newForm.matchPassword()) {
     passwordMatch.style = "display: block";
   }
