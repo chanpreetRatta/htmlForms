@@ -1,12 +1,29 @@
+class Form {
+  constructor(form) {
+    this.form = form;
+  }
+
+  matchPassword() {
+    let password = this.form.elements["password"];
+    let confirmPassword = this.form.elements["confirmPassword"];
+    if (password.value !== confirmPassword.value) {
+      password.style = "border: 1px solid red; outline: 0";
+      confirmPassword.style = "border: 1px solid red; outline: 0";
+      return false;
+    } else if (password.value === confirmPassword.value) {
+      return true;
+    }
+  }
+}
+
 let form = document.querySelector(".form");
 let passwordMatch = document.querySelector(".not-matched");
 
-form.addEventListener("keyup", (event) => {
-  let password = form.elements["password"].value;
-  let confirmPassword = form.elements["confirmPassword"].value;
-  if (password !== confirmPassword) {
-    passwordMatch.style = "display: block";
-  } else if (password === confirmPassword) {
+let newForm = new Form(form);
+form.addEventListener("keyup", () => {
+  if (newForm.matchPassword()) {
     passwordMatch.style = "display: none";
+  } else if (!newForm.matchPassword()) {
+    passwordMatch.style = "display: block";
   }
 });
