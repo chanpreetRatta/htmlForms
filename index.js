@@ -16,19 +16,22 @@ class Form {
 
 let form = document.querySelector(".form");
 let passwordMatch = document.querySelector(".not-matched");
-passwordMatch.style = "visibility: hidden";
 
-function updateUI() {
+passwordMatch.style = "visibility: hidden";
+let newForm = new Form(form);
+
+function updateUI(event) {
   if (newForm.matchPassword()) {
     password.style = "";
     confirmPassword.style = "";
     passwordMatch.style = "visibility: hidden";
+    document.querySelector(".submit-button").disabled = false;
   } else if (!newForm.matchPassword()) {
     password.style = "border: 1px solid red; outline: 0";
     confirmPassword.style = "border: 1px solid red; outline: 0";
     passwordMatch.style = "display: block";
+    document.querySelector(".submit-button").disabled = true;
   }
 }
 
-let newForm = new Form(form);
 form.addEventListener("keyup", updateUI);

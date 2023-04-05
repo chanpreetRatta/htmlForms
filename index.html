@@ -26,13 +26,28 @@
             <legend><span class="heading-font">Let's do this!</span></legend>
             <form class="form" id="sign-up-form" action="POST">
               <label class="form-label">
-                FIRST NAME<input type="text" name="firstName" id="firstName" />
+                FIRST NAME<input
+                  type="text"
+                  name="firstName"
+                  id="firstName"
+                  required="required"
+                />
               </label>
               <label class="form-label">
-                LAST NAME<input type="text" name="lastName" id="lastName" />
+                LAST NAME<input
+                  type="text"
+                  name="lastName"
+                  id="lastName"
+                  required="required"
+                />
               </label>
               <label class="form-label">
-                EMAIL<input type="email" name="email" id="email" />
+                EMAIL<input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required="required"
+                />
               </label>
               <label class="form-label">
                 PHONE NUMBER<input
@@ -40,7 +55,8 @@
                   name="phoneNumber"
                   id="phoneNumber"
                   pattern="[\d]{3}[ -]?[\d]{3}[ -]?[\d]{4}"
-                  required
+                  title="Please enter the correct phone number"
+                  required="required"
                 />
               </label>
               <label class="form-label">
@@ -48,8 +64,7 @@
                   type="password"
                   name="password"
                   id="password"
-                  pattern=""
-                  title="Please enter the correct phone number"
+                  required="required"
                 />
                 <span class="not-matched">*Passwords do not match</span>
               </label>
@@ -58,13 +73,16 @@
                   type="password"
                   name="confirmPassword"
                   id="confirmPassword"
+                  required="required"
                 />
               </label>
             </form>
           </fieldset>
         </div>
         <div class="bottom">
-          <button class="btn" form="sign-up-form">Create Account</button>
+          <button class="btn submit-button" form="sign-up-form">
+            Create Account
+          </button>
           <p>Already have an account? <a href="#">Log In</a></p>
         </div>
       </div>
